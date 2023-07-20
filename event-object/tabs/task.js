@@ -1,10 +1,15 @@
 const tabs = Array.from(document.querySelectorAll('.tab'));
-const tabsCurent =  Array.from(document.querySelectorAll('.tab__content'));
+const tabsCurent = Array.from(document.querySelectorAll('.tab__content'));
 tabs.forEach((el, idx) => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        tabs.forEach((elem) => {
+            elem.classList.remove('tab_active')
+        })
         el.classList.add('tab_active')
-        for(let i = 0; i < tabs.length; i++){
-            if
-        }
+        tabsCurent.forEach((elem) => {
+            elem.classList.remove('tab__content_active')
+        })
+        tabsCurent[idx].classList.add('tab__content_active')
     })
 })
