@@ -14,17 +14,12 @@ const getCookie = (name) => {
     const value = "; " + document.cookie;
     let parts = value.split("; " + name + "=");
     if (parts.length === 2) {
-        return parts
-            .pop()
-            .split(";")
-            .shift();
+        return parts.pop().split(";").shift();
     }
 }
 
 function closePopup(e) {
-
     e.preventDefault();
-
     document.cookie = 'isClosed=true';
     popup.classList.remove('modal_active');
 }
