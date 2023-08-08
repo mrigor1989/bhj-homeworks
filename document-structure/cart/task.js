@@ -1,12 +1,4 @@
 
-// document.querySelector('.products').addEventListener('click', e => {
-//     if (e.target.classList.contains('product__quantity-control_dec')) {
-//       alert(11)
-//       product__quantity-control_dec
-//     }
-//   });
-
-
 const productList = document.querySelectorAll('.product');
 const cart = document.querySelector('.cart__products');
 
